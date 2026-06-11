@@ -30,8 +30,8 @@
       humanize it, and deliver it straight to your Google Doc.
     </p>
     <div class="hero-ctas">
-      <a href="#pricing" class="cta-btn cta-primary">Order an Essay — $4.99</a>
-      <a href="#how-it-works" class="cta-ghost">See the menu →</a>
+      <a href="#pricing" class="cta-btn cta-primary">Order an Essay — $3.99</a>
+      <a href="#" class="cta-ghost" id="openMenuBtn">See the menu →</a>
     </div>
     <div class="hero-note">No account needed. Pay per essay. 🥢</div>
   </div>
@@ -64,7 +64,7 @@
         <div class="step-num">2</div>
         <div class="step-icon">💳</div>
         <h3>Pay</h3>
-        <p>One-tap checkout with Apple Pay, Google Pay, or card. $4.99 flat — no subscriptions.</p>
+        <p>One-tap checkout with Apple Pay, Google Pay, or card. $3.99 flat — no subscriptions.</p>
       </div>
       <div class="step-card">
         <div class="step-num">3</div>
@@ -90,7 +90,7 @@
       <div class="feature">
         <div class="feature-icon">🧠</div>
         <h3>Adversarially trained</h3>
-        <p>Our humanizer was trained to fool our own AI detector — the same model behind Checkmark. It knows every tell.</p>
+        <p>Our humanizer was trained to fool our own AI detector. It knows every tell.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">🎯</div>
@@ -127,7 +127,7 @@
     <h2>Simple Pricing</h2>
     <p class="section-sub">Pay per essay. No subscription, no credits, no surprise fees.</p>
     <div class="price-card">
-      <div class="price-amount">🥡 $4.99</div>
+      <div class="price-amount">🥡 $3.99</div>
       <div class="price-label">per essay</div>
       <ul class="price-features">
         <li>350–600 word essay (configurable)</li>
@@ -185,9 +185,159 @@
   <div class="footer-inner">
     <span class="footer-logo">🥡 EssayTakeout</span>
     <span class="footer-tagline">Fresh essays, hot delivery.</span>
-    <span class="footer-copy">A product of <a href="https://checkmarkplagiarism.com">Checkmark Plagiarism Inc.</a></span>
+    <span class="footer-copy">&copy; 2025 EssayTakeout</span>
   </div>
 </footer>
+
+<!-- ── Menu Modal ───────────────────────────────────────────────────── -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<div class="menu-modal" id="menuModal" role="dialog" aria-modal="true" aria-label="EssayTakeout Menu">
+  <div class="menu-handle"></div>
+
+  <div class="menu-header">
+    <div class="menu-logo">🥡 EssayTakeout</div>
+    <div class="menu-tagline">Made with artificial flavors since 2025</div>
+    <button class="menu-close" id="closeMenuBtn" aria-label="Close">✕</button>
+  </div>
+
+  <div class="menu-body">
+
+    <!-- THE BASE -->
+    <div class="menu-section">
+      <div class="menu-section-header">The Base</div>
+      <div class="menu-item">
+        <div class="menu-item-left">
+          <span class="menu-item-name">Custom Essay</span>
+          <span class="menu-item-desc">AI-written, humanized, and delivered to your Google Doc</span>
+        </div>
+        <span class="menu-item-price">$3.99</span>
+      </div>
+    </div>
+
+    <!-- PORTION SIZE -->
+    <div class="menu-section">
+      <div class="menu-section-header">Portion Size</div>
+      <div class="menu-item">
+        <div class="menu-item-left">
+          <span class="menu-item-name">Small</span>
+          <span class="menu-item-desc">~350 words</span>
+        </div>
+        <span class="menu-item-price free">included</span>
+      </div>
+      <div class="menu-item popular">
+        <div class="menu-item-left">
+          <span class="menu-item-name">Regular <span class="badge">★ Most ordered</span></span>
+          <span class="menu-item-desc">~500 words</span>
+        </div>
+        <span class="menu-item-price free">included</span>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-left">
+          <span class="menu-item-name">Large</span>
+          <span class="menu-item-desc">Up to 4,000 words</span>
+        </div>
+        <span class="menu-item-price free">included</span>
+      </div>
+    </div>
+
+    <!-- SPICE LEVEL -->
+    <div class="menu-section">
+      <div class="menu-section-header">Spice Level <span class="section-sub-tag">Grade level</span></div>
+      <div class="menu-item">
+        <div class="menu-item-left">
+          <span class="menu-item-name">🌶 Mild — Middle School (6–8)</span>
+        </div>
+        <span class="menu-item-price free">included</span>
+      </div>
+      <div class="menu-item popular">
+        <div class="menu-item-left">
+          <span class="menu-item-name">🌶🌶 Medium — High School (9–12) <span class="badge">★</span></span>
+        </div>
+        <span class="menu-item-price free">included</span>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-left">
+          <span class="menu-item-name">🌶🌶🌶 Hot — College Freshman</span>
+        </div>
+        <span class="menu-item-price free">included</span>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-left">
+          <span class="menu-item-name">🌶🌶🌶🌶 Extra Hot — Upperclassman</span>
+        </div>
+        <span class="menu-item-price free">included</span>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-left">
+          <span class="menu-item-name">🔥 Nuclear — Graduate Student</span>
+        </div>
+        <span class="menu-item-price free">included</span>
+      </div>
+    </div>
+
+    <!-- TARGET GRADE -->
+    <div class="menu-section">
+      <div class="menu-section-header">The Goal <span class="section-sub-tag">Target grade</span></div>
+      <div class="menu-item"><div class="menu-item-left"><span class="menu-item-name">Barely Passing</span></div><span class="menu-item-price free">included</span></div>
+      <div class="menu-item"><div class="menu-item-left"><span class="menu-item-name">Solid C</span></div><span class="menu-item-price free">included</span></div>
+      <div class="menu-item popular"><div class="menu-item-left"><span class="menu-item-name">Solid B <span class="badge">★ Most ordered</span></span></div><span class="menu-item-price free">included</span></div>
+      <div class="menu-item"><div class="menu-item-left"><span class="menu-item-name">Strong A</span></div><span class="menu-item-price free">included</span></div>
+      <div class="menu-item"><div class="menu-item-left"><span class="menu-item-name">A+ Perfection</span></div><span class="menu-item-price free">included</span></div>
+    </div>
+
+    <!-- TOPPINGS -->
+    <div class="menu-section">
+      <div class="menu-section-header">Toppings <span class="section-sub-tag">Pick any combination</span></div>
+      <div class="menu-item"><div class="menu-item-left"><span class="menu-item-name">Casual tone</span></div><span class="menu-item-price free">included</span></div>
+      <div class="menu-item"><div class="menu-item-left"><span class="menu-item-name">Formal tone</span></div><span class="menu-item-price free">included</span></div>
+      <div class="menu-item"><div class="menu-item-left"><span class="menu-item-name">1st person</span></div><span class="menu-item-price free">included</span></div>
+      <div class="menu-item"><div class="menu-item-left"><span class="menu-item-name">3rd person</span></div><span class="menu-item-price free">included</span></div>
+      <div class="menu-item"><div class="menu-item-left"><span class="menu-item-name">🇺🇸 US English</span></div><span class="menu-item-price free">included</span></div>
+      <div class="menu-item"><div class="menu-item-left"><span class="menu-item-name">🇬🇧 UK English</span></div><span class="menu-item-price free">included</span></div>
+    </div>
+
+    <!-- SEASONING -->
+    <div class="menu-section">
+      <div class="menu-section-header">Seasoning <span class="section-sub-tag">Style matching from your past essays</span></div>
+      <div class="menu-item popular">
+        <div class="menu-item-left">
+          <span class="menu-item-name">First style sample</span>
+          <span class="menu-item-desc">We write in your voice</span>
+        </div>
+        <span class="menu-item-price free">included</span>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-left">
+          <span class="menu-item-name">Each additional sample</span>
+          <span class="menu-item-desc">Better match with more examples</span>
+        </div>
+        <span class="menu-item-price">+$0.25</span>
+      </div>
+    </div>
+
+    <!-- SPECIAL INSTRUCTIONS -->
+    <div class="menu-section">
+      <div class="menu-section-header">Special Instructions</div>
+      <div class="menu-item"><div class="menu-item-left"><span class="menu-item-name">Rubric upload</span><span class="menu-item-desc">PDF, DOCX, or TXT — we grade against it</span></div><span class="menu-item-price free">included</span></div>
+      <div class="menu-item"><div class="menu-item-left"><span class="menu-item-name">3 AI-graded drafts</span><span class="menu-item-desc">We pick the one that hits your target</span></div><span class="menu-item-price free">included</span></div>
+    </div>
+
+    <!-- THE KITCHEN -->
+    <div class="menu-section">
+      <div class="menu-section-header">From the Kitchen <span class="section-sub-tag">Always included</span></div>
+      <div class="menu-item"><div class="menu-item-left"><span class="menu-item-name">Full humanization pass</span><span class="menu-item-desc">Trained to fool our own AI detector</span></div><span class="menu-item-price free">included</span></div>
+      <div class="menu-item"><div class="menu-item-left"><span class="menu-item-name">Natural typing delivery</span><span class="menu-item-desc">Bursts, pauses, typos — looks real</span></div><span class="menu-item-price free">included</span></div>
+      <div class="menu-item"><div class="menu-item-left"><span class="menu-item-name">Self-healing engine</span><span class="menu-item-desc">Auto-corrects if you accidentally type mid-delivery</span></div><span class="menu-item-price free">included</span></div>
+      <div class="menu-item"><div class="menu-item-left"><span class="menu-item-name">Session breaks</span><span class="menu-item-desc">Realistic pauses that look like you stepped away</span></div><span class="menu-item-price free">included</span></div>
+    </div>
+
+    <div class="menu-footer">
+      <a href="#pricing" class="cta-btn cta-primary" id="menuOrderBtn" style="width:100%;text-align:center;display:block;">Order for $3.99 →</a>
+      <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:10px;">No account needed · Pay per essay · 🥡 Loyalty punch card available</p>
+    </div>
+
+  </div>
+</div>
 
 <script>
 // ── Waitlist form ──────────────────────────────────────────────────
@@ -217,6 +367,18 @@ document.getElementById("waitlistForm").addEventListener("submit", async functio
     emailInput.disabled = true;
   }
 });
+
+// ── Menu modal ─────────────────────────────────────────────────────
+(function() {
+  const modal   = document.getElementById("menuModal");
+  const overlay = document.getElementById("menuOverlay");
+  function openMenu(e) { if (e) e.preventDefault(); modal.classList.add("open"); overlay.classList.add("open"); document.body.style.overflow = "hidden"; }
+  function closeMenu() { modal.classList.remove("open"); overlay.classList.remove("open"); document.body.style.overflow = ""; }
+  document.getElementById("openMenuBtn").addEventListener("click", openMenu);
+  document.getElementById("closeMenuBtn").addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+  document.getElementById("menuOrderBtn").addEventListener("click", closeMenu);
+})();
 
 // ── Extension download gate ────────────────────────────────────────
 document.getElementById("dlBtn").addEventListener("click", async () => {
