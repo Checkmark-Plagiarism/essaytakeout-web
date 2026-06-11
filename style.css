@@ -1,0 +1,109 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --brand:   #c0440e;
+  --brand-d: #9e3509;
+  --bg:      #fafaf8;
+  --surface: #ffffff;
+  --text:    #1a1a1a;
+  --muted:   #6b6b6b;
+  --border:  #e5e5e0;
+  --radius:  12px;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+/* ── Nav ───────────────────────────────────────── */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(250,250,248,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+.nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; gap: 32px; }
+.nav-logo { font-weight: 800; font-size: 18px; color: var(--brand); flex: 1; }
+.nav-link { text-decoration: none; color: var(--muted); font-size: 14px; font-weight: 500; }
+.nav-link:hover { color: var(--text); }
+.nav-cta { padding: 8px 18px; font-size: 13px; }
+
+/* ── Buttons ───────────────────────────────────── */
+.cta-btn { display: inline-block; background: var(--brand); color: #fff; padding: 12px 26px; border-radius: var(--radius); font-weight: 600; font-size: 15px; text-decoration: none; border: none; cursor: pointer; transition: background .15s; }
+.cta-btn:hover { background: var(--brand-d); }
+.cta-primary { background: var(--brand); }
+.cta-ghost { display: inline-block; color: var(--brand); font-weight: 600; text-decoration: none; font-size: 15px; }
+.cta-ghost:hover { text-decoration: underline; }
+.cta-full { width: 100%; text-align: center; display: block; margin-top: 24px; }
+
+/* ── Hero ──────────────────────────────────────── */
+.hero { padding: 100px 24px 80px; text-align: center; }
+.hero-inner { max-width: 720px; margin: 0 auto; }
+.hero-badge { display: inline-block; background: #fef3ee; color: var(--brand); border: 1px solid #f5c4ac; border-radius: 999px; padding: 5px 14px; font-size: 13px; font-weight: 600; margin-bottom: 28px; }
+.hero h1 { font-size: clamp(44px, 7vw, 72px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; color: var(--text); margin-bottom: 20px; }
+.hero-sub { font-size: 18px; color: var(--muted); max-width: 560px; margin: 0 auto 36px; }
+.hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+.hero-note { font-size: 13px; color: var(--muted); }
+
+/* ── Proof strip ───────────────────────────────── */
+.proof-strip { background: var(--brand); color: #fff; padding: 12px 24px; display: flex; justify-content: center; gap: 16px; font-size: 13px; font-weight: 500; flex-wrap: wrap; }
+.proof-strip .sep { opacity: .5; }
+
+/* ── Sections ──────────────────────────────────── */
+.section-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.steps, .features, .pricing, .install { padding: 96px 0; }
+.steps { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.features { background: var(--bg); }
+.pricing { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: center; }
+.install { background: var(--bg); }
+
+h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; letter-spacing: -.8px; margin-bottom: 12px; }
+.section-sub { color: var(--muted); font-size: 17px; margin-bottom: 52px; }
+.steps h2, .features h2, .pricing h2 { text-align: center; }
+.steps .section-sub, .features .section-sub { text-align: center; }
+
+/* ── Steps grid ────────────────────────────────── */
+.steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 48px; }
+.step-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px 28px; position: relative; }
+.step-num { position: absolute; top: 20px; right: 20px; font-size: 12px; font-weight: 700; color: var(--muted); background: var(--border); border-radius: 999px; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; }
+.step-icon { font-size: 32px; margin-bottom: 16px; }
+.step-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.step-card p { font-size: 14px; color: var(--muted); }
+
+/* ── Features grid ─────────────────────────────── */
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-top: 48px; }
+.feature { padding: 28px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.feature-icon { font-size: 28px; margin-bottom: 14px; }
+.feature h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+.feature p { font-size: 14px; color: var(--muted); }
+
+/* ── Pricing ───────────────────────────────────── */
+.price-card { display: inline-block; background: var(--bg); border: 2px solid var(--brand); border-radius: 20px; padding: 48px 52px; max-width: 400px; text-align: left; }
+.price-amount { font-size: 56px; font-weight: 800; color: var(--brand); letter-spacing: -2px; }
+.price-label { font-size: 16px; color: var(--muted); margin-bottom: 28px; }
+.price-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 8px; }
+.price-features li { font-size: 15px; color: var(--text); padding-left: 22px; position: relative; }
+.price-features li::before { content: "✓"; position: absolute; left: 0; color: var(--brand); font-weight: 700; }
+
+/* ── Install ───────────────────────────────────── */
+.install-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.install-text h2 { text-align: left; }
+.install-steps { list-style: none; counter-reset: steps; display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
+.install-steps li { counter-increment: steps; padding-left: 36px; position: relative; font-size: 16px; }
+.install-steps li::before { content: counter(steps); position: absolute; left: 0; top: 1px; width: 24px; height: 24px; background: var(--brand); color: #fff; border-radius: 999px; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.install-note { font-size: 15px; color: var(--muted); margin-bottom: 16px; }
+.waitlist-form { display: flex; gap: 10px; flex-wrap: wrap; }
+.waitlist-form input { flex: 1; min-width: 180px; padding: 12px 16px; border: 1px solid var(--border); border-radius: var(--radius); font-size: 14px; font-family: inherit; background: var(--surface); }
+.waitlist-form input:focus { outline: 2px solid var(--brand); border-color: transparent; }
+.install-fine { font-size: 12px; color: var(--muted); margin-top: 10px; }
+
+/* ── Footer ────────────────────────────────────── */
+.footer { border-top: 1px solid var(--border); padding: 28px 24px; }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.footer-logo { font-weight: 800; color: var(--brand); font-size: 15px; flex: 1; }
+.footer-copy { font-size: 13px; color: var(--muted); }
+.footer-copy a { color: var(--muted); }
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 768px) {
+  .install-inner { grid-template-columns: 1fr; gap: 48px; }
+  .hero { padding: 64px 24px 56px; }
+  .steps, .features, .pricing, .install { padding: 64px 0; }
+  .proof-strip { gap: 8px; }
+  .proof-strip .sep { display: none; }
+  .price-card { padding: 36px 28px; }
+}
